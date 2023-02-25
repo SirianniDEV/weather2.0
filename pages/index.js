@@ -13,6 +13,8 @@ export default function Home() {
 
   const [data, setData] = useState();
   const grabWeather = useRef(false);
+  const [bgColor, setBgColor] = useState("");
+  
 
   const fetchWeather = async () => {
     const response = await axios.get(url);
@@ -73,6 +75,28 @@ export default function Home() {
           icon = '/icons/Snow.svg'
         } else if(weather.weather[0].main == "Thunderstorm"){
           icon = '/icons/Thunderstrom.svg'
+        } else if(weather.weather[0].temp >= 25 && weather.weather[0].main == "Clear"){
+          icon = 'icons/sun.svg'
+        }
+
+        function getWeatherTypeClass(weatherType) {
+          let weatherClass = '';
+        
+          if (weatherType === 'Clear') {
+            weatherClass = styles.clear;
+          } else if (weatherType === 'Clouds') {
+            weatherClass = styles.clouds;
+          } else if (weatherType === 'Rain' || weatherType === 'Drizzle') {
+            weatherClass = styles.rain;
+          } else if (weatherType === 'Thunderstorm') {
+            weatherClass = styles.thunderstorm;
+          } else if (weatherType === 'Snow') {
+            weatherClass = styles.snow;
+          } else if (weatherType === 'Atmosphere'){
+            weatherClass = styles.atmosphere;
+          }
+        
+          return weatherClass;
         }
 
         var now = new Date(weather.dt_txt);
@@ -80,13 +104,13 @@ export default function Home() {
         var day = days[now.getDay()]
 
         return (
-          <div className={styles.card} key={index}>
+          <div className={`${styles.card} ${getWeatherTypeClass(weather.weather[0].main)}`} key={index}>
             <h1> {day} </h1>
             <Image 
               src={icon}
               alt={icon}
-              width={180}
-              height={180}
+              width={250}
+              height={250}
               priority/>
 
               <div className={styles.temp}>

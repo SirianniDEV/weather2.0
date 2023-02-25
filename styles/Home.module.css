@@ -100,7 +100,8 @@
 }
 
 .card h1 {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0 0;
+  padding: 0;
   font-size: 50px;
   font-family: Teko;
 }
@@ -140,3 +141,24 @@
     filter: invert(1);
   }
 }
+
+
+.clouds {
+ background: linear-gradient(180deg, #6BA8CB 0%, #A5C4D2 56.13%, #D9DFDF 100%);
+}
+.clear {
+  background: linear-gradient(180deg, #3A92C3 0%, #8BBED7 56.13%, #D9DFDF 100%);
+}
+.atmoshphere {
+  background: linear-gradient(180deg, #31656C 0%, #A5C4D2 56.13%, #D9DFDF 100%);
+}
+.rain, .drizzle {
+ background: linear-gradient(180deg, #233F76 0%, #77ABF9 44.33%, #EAEAFF 100%);
+}
+.snow {
+ background: linear-gradient(180deg, #48799F 0%, #51888F 0.01%, #229CB7 41.32%, #EBEDF7 100%);
+}
+.thunderstorm {
+ background: linear-gradient(180deg, #4B0F59 16.55%, #7590D6 59.26%, #F4EBF0 99.36%);
+}
+
