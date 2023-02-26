@@ -4,6 +4,8 @@
   padding: 0 2rem;
 }
 
+
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
@@ -12,60 +14,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  align-items: center;
-}
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 .grid {
@@ -73,7 +21,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1000px;
 }
 
 .card {
@@ -90,14 +38,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+  color: #256270;
+  border-color: #256270;
 }
 
 .card h1 {
@@ -105,25 +54,24 @@
   padding: 0;
   font-size: 50px;
   font-family: Teko;
+  color: #f5f5f5;
   text-align: center;
 }
 
 .card h2 {
   margin: 0;
-  font-size: 2.5rem;
-  font-family: Teko;
+  font-size: 3rem;
 }  
 .card p {
   margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+  font-size: 25px;
 }
 
-.container p {
+/* .container p {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
+} */
 
 .container h1 {
   text-align: center;
@@ -138,8 +86,16 @@
 .header{
   display: flex;
   justify-content: space-between;
-  width: 50%;
-  
+  width: 70%;
+  font-size: 20px;
+}
+
+.header a:hover,
+.header a:focus,
+.header a:active {
+  color: #256270;
+  border-color: #256270;
+  text-decoration: underline;
 }
 
 @media (max-width: 600px) {

@@ -106,6 +106,7 @@ export default function Home() {
         return (
           <div className={`${styles.card} ${getWeatherTypeClass(weather.weather[0].main)}`} key={index}>
             <h1> {day} </h1>
+            <div> {month} {weather.dt_txt.substr(8,2)}, {weather.dt_txt.substr(0,4)}</div>
             <Image 
               src={icon}
               alt={icon}
@@ -116,13 +117,9 @@ export default function Home() {
               <div className={styles.temp}>
                <h2>{weather.main.temp.toFixed(1)}°</h2>
               </div>
+
               <p>{weather.weather[0].main}</p>
-              
-              <div> {month} {weather.dt_txt.substr(8,2)}, {weather.dt_txt.substr(0,4)}
-              </div>
-             
-
-
+            
           </div>
         )
       }
@@ -147,6 +144,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
+
       <Head>
         <title>20Fourcast</title>
         <meta name="description" content="Weather app using OpenWeatherAPI" />
@@ -155,9 +153,9 @@ export default function Home() {
 
       <div className={styles.main}>
 
-
+    
         <div className={styles.header}>
-          <a href='https://port.sofiasirianni.ca/home'
+          <a href='https://port.sofiasirianni.ca'
             target="_blank">
             <p>By:{''} Sofia</p>
           </a>
