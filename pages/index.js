@@ -13,7 +13,6 @@ export default function Home() {
 
   const [data, setData] = useState();
   const grabWeather = useRef(false);
-  const [bgColor, setBgColor] = useState("");
   
 
   const fetchWeather = async () => {
