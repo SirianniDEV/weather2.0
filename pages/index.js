@@ -127,10 +127,10 @@ export default function Home() {
     setData(weatherData);
   }
 
-  useEffect(() => {
-    if(grabWeather.current === true){
-      fetchWeather()
-    }
+  // useEffect(() => {
+  //   if(grabWeather.current === true){
+  //     fetchWeather()
+  //   }
 
     return () => {
       grabWeather.current = true;
