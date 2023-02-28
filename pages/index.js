@@ -151,7 +151,6 @@ export default function Home() {
       </Head>
 
       <div className={styles.main}>
-
     
         <div className={styles.header}>
           <a href='https://port.sofiasirianni.ca'
@@ -160,13 +159,13 @@ export default function Home() {
           </a>
           <p>{date}</p>
         </div>
-          <Image
-            src='/Logo.svg'
-            alt="Weather Logo"
-            width={200}
-            height={200}
-            priority />
-          <h1>The Weather in Vancouver, BC</h1>
+        <Image
+          src='/Logo.svg'
+          alt="Weather Logo"
+          width={200}
+          height={200}
+          priority />
+        <h1>The Weather in Vancouver, BC</h1>
 
         <div className={styles.grid}>
           {data}
